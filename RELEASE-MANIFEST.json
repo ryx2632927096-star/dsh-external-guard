@@ -1,0 +1,116 @@
+{
+  "kind": "release-preview-only",
+  "package": "dsh-external-guard",
+  "generatedAt": "2026-11-14T17:56:20.693Z",
+  "includesGitHistory": false,
+  "scan": {
+    "files": 14,
+    "categories": [
+      "local-user-path",
+      "email",
+      "private-key",
+      "credential-value",
+      "account-number"
+    ],
+    "findings": 0,
+    "limitation": "Pattern scan only; not a proof of absence of sensitive content"
+  },
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 1088,
+      "sha256": "55534e119c458408bbfd4a9ca877f2b164d143159d6c50f9517f6db33917cfe5",
+      "source": "LICENSE"
+    },
+    {
+      "path": "README.md",
+      "bytes": 12268,
+      "sha256": "2e78b4438143a162b164ce1eab9891296e5670b57492b0f4d2ef55621327fb38",
+      "source": "README.md"
+    },
+    {
+      "path": "package.json",
+      "bytes": 1501,
+      "sha256": "a2f09ef40335d761f4eebdc4783d82c614be510b81647a0c9afce64cb7491581",
+      "source": "package.json"
+    },
+    {
+      "path": "cordis.patch.yml",
+      "bytes": 2093,
+      "sha256": "1e5a17fc589a07e994acf52c417f380cfc72749abe5eee97bbd5e3e79fb3b28e",
+      "source": "cordis.patch.yml"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 1384,
+      "sha256": "baf528bc1edca0e90daa3fd12f04acd7209e2cac72dc6ea38887c6576f6dc080",
+      "source": ".gitignore"
+    },
+    {
+      "path": ".npmignore",
+      "bytes": 565,
+      "sha256": "0347d39c28b9b5dbb33df25e931dda648e8a014abe7a5b2e970138e23551634f",
+      "source": ".npmignore"
+    },
+    {
+      "path": "lib/index.js",
+      "bytes": 14983,
+      "sha256": "269677698ac38a2fa4b9551a74d91afbfbc3195a26053e77ff0fe29301c2e744",
+      "source": "lib/index.js"
+    },
+    {
+      "path": "lib/manifest.js",
+      "bytes": 13086,
+      "sha256": "ad46e6f8bdc788d2222f91b56073e9a42d20bc1be63e8f13aa4dd60d4ee06f77",
+      "source": "lib/manifest.js"
+    },
+    {
+      "path": "lib/supervisor.js",
+      "bytes": 10855,
+      "sha256": "7e0c2408df4a96ec7bc113c3e51fa17e6fdf00163a34644be42bfabe51e82b98",
+      "source": "lib/supervisor.js"
+    },
+    {
+      "path": "src/client.js",
+      "bytes": 19875,
+      "sha256": "01a850b28b8612d353cd43603da91d548157b66bf0813771681540ee1bf4e5a2",
+      "source": "src/client.js"
+    },
+    {
+      "path": "scripts/config-entries.test.mjs",
+      "bytes": 16573,
+      "sha256": "a3b54a54ce65d15f057fbc35e11a46dbbcf507a12daecc6a6abc62d3feb65687",
+      "source": "scripts/config-entries.test.mjs"
+    },
+    {
+      "path": "scripts/smoke.mjs",
+      "bytes": 4738,
+      "sha256": "eab4e0b8eaf332f03a015b5bf25a99f8631113b78aa61697079142737fd963d7",
+      "source": "scripts/smoke.mjs"
+    },
+    {
+      "path": "scripts/prepare-preview.mjs",
+      "bytes": 4025,
+      "sha256": "95e7c9450f9b07267e7c00751dcf31762ecb94d874ec24d6604236ccced7c973",
+      "source": "scripts/prepare-preview.mjs"
+    },
+    {
+      "path": "docs/DEVLOG.public.md",
+      "bytes": 1585,
+      "sha256": "af670ae15fd8cc1559644b2461aaa9553d95357a9559ea02595c870b114d371c",
+      "source": "docs/DEVLOG.public.md"
+    },
+    {
+      "path": "DEVLOG.md",
+      "bytes": 1585,
+      "sha256": "af670ae15fd8cc1559644b2461aaa9553d95357a9559ea02595c870b114d371c",
+      "source": "docs/DEVLOG.public.md"
+    },
+    {
+      "path": "PREVIEW.md",
+      "bytes": 402,
+      "sha256": "f5d1105e5e1bc91d3b896189b9ca4c5fcab655843920bcb6b45c08954756d7c8",
+      "source": "generated"
+    }
+  ]
+}

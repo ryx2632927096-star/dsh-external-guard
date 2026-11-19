@@ -1,0 +1,40 @@
+# dsh-external-guard bundle patch
+#
+# 与 dsh-atlas / dsh-click 一致：配置写在本包自带 patch 里，
+# 不要在 profile 的 cordis.patch.yml 里再插一次同 id 条目（会重复 id 导致加载失败）。
+- insert:
+    - id: dsh-external-guard
+      name: dsh-external-guard
+      config:
+        # 每隔多少毫秒探活一次（0 = 关闭自动巡检，只在打开面板时探测）
+        pollIntervalMs: 15000
+        # 单个进程探测的超时（毫秒）
+        probeTimeoutMs: 1200
+        # 允许通过 HTTP 启停（writesEnabled=true 且 monitorOnly=false 才生效）
+        writesEnabled: true
+
+        # ── 只监测模式 ──────────────────────────────────────────────
+        # 默认 true：本插件退化为纯看板，不提供「启动 / 停止」按钮。
+        #
+        # 原因：surfcore 插件里有个 maybeStartQqChain()，每 120 秒检查
+        # SnowLuma(5099/3000/3001) 和 Ollama(11434) 的端口，发现没监听就自动拉起。
+        # 本插件再提供启停按钮 = 第二套拉起机制，两者会打架：
+        # 用户在这里点「停止」，最多 2 分钟就被 surfcore 拉回来，看起来像按钮失灵。
+        #
+        # 改成 false 才会出现「启动 / 停止」按钮（同时要求 writesEnabled: true）。
+        # 改完必须重启宿主，宿主侧模块不走热重载。
+        monitorOnly: true
+
+        # 可选：按 id 覆盖内置条目，或新增服务；不填/[] 保留内置默认。
+        # start 按字段合并，数组整体替换；任一配置错误停用实例清单并显示诊断。
+        # 路径使用绝对路径，完整健康检查/日志示例见 README。
+        # entries:
+        #   - id: ollama
+        #     start:
+        #       exec: 'D:\Apps\Ollama\ollama app.exe'
+        #       cwd: 'D:\Apps\Ollama'
+        #   - id: my-service
+        #     title: 我的服务
+        #     probes:
+        #       - kind: port
+        #         port: 8080

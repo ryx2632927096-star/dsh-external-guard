@@ -1,0 +1,32 @@
+# npm 黑名单兜底（files 白名单之外的补充）
+# 注意：files 是白名单，但目录整块列进去时子文件拦不住，这里必须显式排除。
+
+# 过程记录：不属于 npm 包内容，仓库和项目文件夹里都留着
+材料/
+session-archive/
+
+# 原私人开发日志不进 npm；公开快照另从 docs/DEVLOG.public.md 生成脱敏版
+DEVLOG.md
+
+# 改动前的备份
+*.bak
+*.bak-*
+**/*.bak
+**/*.bak-*
+
+# 日志
+*.log
+logs/
+**/*.log
+
+# 编辑器 / 系统
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 本地临时
+_scratch/
+_tmp/
+*.tmp
+*.tgz

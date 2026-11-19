@@ -1,0 +1,54 @@
+{
+  "name": "dsh-external-guard",
+  "version": "0.2.0",
+  "description": "DSH 插件：把配合别的插件使用的本机外部进程（Ollama / SnowLuma / surfcore bridge）统一登记、探活、看日志、一键启停。默认只监测。",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./src/client.js",
+    "./manifest": "./lib/manifest.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/manifest.js",
+    "lib/supervisor.js",
+    "src/client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "scripts/config-entries.test.mjs",
+    "scripts/smoke.mjs"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-slots"
+      ],
+      "platform": "web"
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "node --check lib/index.js && node --check lib/manifest.js && node --check lib/supervisor.js && node --check src/client.js",
+    "test": "node --experimental-vm-modules --test scripts/config-entries.test.mjs",
+    "test:config": "node --experimental-vm-modules --test scripts/config-entries.test.mjs",
+    "test:local": "node scripts/smoke.mjs"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "process",
+    "supervisor",
+    "ollama",
+    "snowluma"
+  ],
+  "license": "MIT"
+}
