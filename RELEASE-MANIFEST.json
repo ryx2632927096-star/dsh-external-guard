@@ -1,7 +1,7 @@
 {
   "kind": "release-preview-only",
   "package": "dsh-external-guard",
-  "generatedAt": "2026-11-14T17:56:20.693Z",
+  "generatedAt": "2026-11-19T18:57:09.505Z",
   "includesGitHistory": false,
   "scan": {
     "files": 14,
@@ -24,8 +24,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 12268,
-      "sha256": "2e78b4438143a162b164ce1eab9891296e5670b57492b0f4d2ef55621327fb38",
+      "bytes": 12991,
+      "sha256": "7be1ddcf880b9f8582853d35358bd567ef31e979cb2a90aa54974e2a471322d2",
       "source": "README.md"
     },
     {
@@ -96,14 +96,14 @@
     },
     {
       "path": "docs/DEVLOG.public.md",
-      "bytes": 1585,
-      "sha256": "af670ae15fd8cc1559644b2461aaa9553d95357a9559ea02595c870b114d371c",
+      "bytes": 1840,
+      "sha256": "599629e12a672fd4441bbdca74f756382a2f0f96df54e287cb705b2f86c12cb3",
       "source": "docs/DEVLOG.public.md"
     },
     {
       "path": "DEVLOG.md",
-      "bytes": 1585,
-      "sha256": "af670ae15fd8cc1559644b2461aaa9553d95357a9559ea02595c870b114d371c",
+      "bytes": 1840,
+      "sha256": "599629e12a672fd4441bbdca74f756382a2f0f96df54e287cb705b2f86c12cb3",
       "source": "docs/DEVLOG.public.md"
     },
     {
