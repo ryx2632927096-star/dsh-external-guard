@@ -29,3 +29,7 @@
 ### 2026-11-20 · 正式 Web 宿主
 
 使用独立 DSH 0.2.2-rc.1 Web profile 验证了状态、合成日志、默认启停保护和面板脚本交付。桌面交互和业务服务启停待验收。详细结果见 README。
+
+## 2026-11-21 npm 安装
+
+发行包使用 @r-xuan/dsh-external-guard，支持通过 DSH 插件管理器安装到指定 profile。

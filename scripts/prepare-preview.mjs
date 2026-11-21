@@ -48,7 +48,7 @@ content.set('PREVIEW.md', Buffer.from('# Release preview snapshot\n\nGenerated f
 const sha256 = (buffer) => createHash('sha256').update(buffer).digest('hex')
 const files = [...content].map(([path, buffer]) => ({ path, bytes: buffer.length, sha256: sha256(buffer),
   source: path === 'DEVLOG.md' ? 'docs/DEVLOG.public.md' : path === 'PREVIEW.md' ? 'generated' : path }))
-const manifest = { kind: 'release-preview-only', package: 'dsh-external-guard',
+const manifest = { kind: 'release-preview-only', package: JSON.parse(content.get('package.json')).name,
   generatedAt: new Date().toISOString(), includesGitHistory: false,
   scan: { files: allowed.length, categories: checks.map(([name]) => name), findings: 0,
     limitation: 'Pattern scan only; not a proof of absence of sensitive content' }, files }

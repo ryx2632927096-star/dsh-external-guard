@@ -4,6 +4,16 @@ DSH 外部服务健康与日志面板，可通过本地配置登记和显式启�
 
 **0.2.0 发行预览，尚未发布 npm。** 已在独立 profile 的正式 DSH Web 宿主完成只监测验收，见文末记录。MIT，完整许可见 [LICENSE](LICENSE)。
 
+## 从 npm 安装到 DSH
+
+在终端运行下面的命令。把 `web` 换成你实际使用的 DSH profile。DSH 会安装依赖并登记插件 bundle，重新加载该 profile 后生效。
+
+```powershell
+dsh plugin --profile web add @r-xuan/dsh-external-guard
+```
+
+如果这个 profile 已经链接了旧版 `dsh-external-guard`，请先移除旧的 bundle 登记和依赖，再安装新包，以免重复加载。
+
 ## 支持范围
 
 - 目标平台为 Windows；端口反查和停止进程使用 Windows 原生命令。其它操作系统不在支持范围内。
@@ -38,11 +48,11 @@ VM Modules的ExperimentalWarning来自测试隔离，不是测试失败。`npm r
 ```jsonc
 {
   "dependencies": {
-    "dsh-external-guard": "link:D:/Plugins/dsh-external-guard"
+    "@r-xuan/dsh-external-guard": "link:D:/Plugins/dsh-external-guard"
   },
   "dsh": {
     "profile": {
-      "bundles": ["dsh-external-guard"]
+      "bundles": ["@r-xuan/dsh-external-guard"]
     }
   }
 }
@@ -53,9 +63,9 @@ VM Modules的ExperimentalWarning来自测试隔离，不是测试失败。`npm r
 ```powershell
 $guardSource = (Resolve-Path -LiteralPath '.').Path
 $guardProfile = Join-Path $env:USERPROFILE '.dsh\profiles\desktop'
-$guardLink = Join-Path $guardProfile 'node_modules\dsh-external-guard'
+$guardLink = Join-Path $guardProfile 'node_modules\@r-xuan\dsh-external-guard'
 if (Test-Path -LiteralPath $guardLink) { throw '链接已存在，先核实旧目标，不覆盖' }
-New-Item -ItemType Directory -Path (Join-Path $guardProfile 'node_modules') -Force
+New-Item -ItemType Directory -Path (Split-Path -Parent $guardLink) -Force
 New-Item -ItemType Junction -Path $guardLink -Target $guardSource
 ```
 

@@ -1,5 +1,5 @@
 {
-  "name": "dsh-external-guard",
+  "name": "@r-xuan/dsh-external-guard",
   "version": "0.2.0",
   "description": "DSH 插件：把配合别的插件使用的本机外部进程（Ollama / SnowLuma / surfcore bridge）统一登记、探活、看日志、一键启停。默认只监测。",
   "type": "module",
@@ -50,5 +50,13 @@
     "ollama",
     "snowluma"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryx2632927096-star/dsh-external-guard.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }

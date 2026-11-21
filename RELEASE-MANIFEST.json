@@ -1,7 +1,7 @@
 {
   "kind": "release-preview-only",
-  "package": "dsh-external-guard",
-  "generatedAt": "2026-11-19T18:57:09.505Z",
+  "package": "@r-xuan/dsh-external-guard",
+  "generatedAt": "2026-11-21T07:15:39.973Z",
   "includesGitHistory": false,
   "scan": {
     "files": 14,
@@ -24,20 +24,20 @@
     },
     {
       "path": "README.md",
-      "bytes": 12991,
-      "sha256": "7be1ddcf880b9f8582853d35358bd567ef31e979cb2a90aa54974e2a471322d2",
+      "bytes": 13228,
+      "sha256": "46860f0ab4f12d8dfc048d5dc138e82299ba8b7353b37936f6fd73d48995913d",
       "source": "README.md"
     },
     {
       "path": "package.json",
-      "bytes": 1501,
-      "sha256": "a2f09ef40335d761f4eebdc4783d82c614be510b81647a0c9afce64cb7491581",
+      "bytes": 1671,
+      "sha256": "62f51e212d9c7ada915a6ba1d75e5ecb10d2b5d20a4d415e2c480dae7aea6175",
       "source": "package.json"
     },
     {
       "path": "cordis.patch.yml",
-      "bytes": 2093,
-      "sha256": "1e5a17fc589a07e994acf52c417f380cfc72749abe5eee97bbd5e3e79fb3b28e",
+      "bytes": 2103,
+      "sha256": "6e848514519c7c1051632e5d2a36b8ff1c03f94315bdfe8f44462c106de69e64",
       "source": "cordis.patch.yml"
     },
     {
@@ -90,20 +90,20 @@
     },
     {
       "path": "scripts/prepare-preview.mjs",
-      "bytes": 4025,
-      "sha256": "95e7c9450f9b07267e7c00751dcf31762ecb94d874ec24d6604236ccced7c973",
+      "bytes": 4049,
+      "sha256": "54de8dd16f3f2001550b758bf9b4b4d58453142d395683b770654198df629f34",
       "source": "scripts/prepare-preview.mjs"
     },
     {
       "path": "docs/DEVLOG.public.md",
-      "bytes": 1840,
-      "sha256": "599629e12a672fd4441bbdca74f756382a2f0f96df54e287cb705b2f86c12cb3",
+      "bytes": 1940,
+      "sha256": "a66188f1b8eadce58b5c89bbeb70d1c11e774257996770f3de44c9929db4767f",
       "source": "docs/DEVLOG.public.md"
     },
     {
       "path": "DEVLOG.md",
-      "bytes": 1840,
-      "sha256": "599629e12a672fd4441bbdca74f756382a2f0f96df54e287cb705b2f86c12cb3",
+      "bytes": 1940,
+      "sha256": "a66188f1b8eadce58b5c89bbeb70d1c11e774257996770f3de44c9929db4767f",
       "source": "docs/DEVLOG.public.md"
     },
     {

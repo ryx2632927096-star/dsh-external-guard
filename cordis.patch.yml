@@ -4,7 +4,7 @@
 # 不要在 profile 的 cordis.patch.yml 里再插一次同 id 条目（会重复 id 导致加载失败）。
 - insert:
     - id: dsh-external-guard
-      name: dsh-external-guard
+      name: "@r-xuan/dsh-external-guard"
       config:
         # 每隔多少毫秒探活一次（0 = 关闭自动巡检，只在打开面板时探测）
         pollIntervalMs: 15000
